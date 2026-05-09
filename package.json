@@ -1,0 +1,35 @@
+{
+  "name": "flomo-mcp-worker",
+  "version": "0.1.0",
+  "description": "Cloudflare Worker MCP server for saving notes to Flomo via webhook.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:init": "node scripts/deploy-prod.mjs",
+    "token": "node scripts/generate-url-token.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test"
+  },
+  "keywords": [
+    "flomo",
+    "mcp",
+    "cloudflare-worker",
+    "chatgpt-connector"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "agents": "^0.12.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260509.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5",
+    "wrangler": "^4.90.0"
+  }
+}

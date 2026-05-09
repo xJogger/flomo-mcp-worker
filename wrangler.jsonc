@@ -1,0 +1,12 @@
+{
+  "name": "flomo-mcp-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "secrets": {
+    "required": ["TOKEN_SECRET"]
+  },
+  "observability": {
+    "enabled": true
+  }
+}
